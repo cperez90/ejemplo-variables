@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mosca</title>
+</head>
+<body>
+    <script>
+
+        let cancion = "Una mosca volava per la llum"
+        cancion = cancion.toLocaleLowerCase();
+        cancion = cancion.split("");
+        const vocales = "aeiou".split("");
+
+        for (let i = 0; i < vocales.length; i++) {
+            let cancionResultado = "";
+            for (let j = 0; j < cancion.length; j++) {
+                /*if(cancion[j] === 'a'|| cancion[j] === 'e'|| cancion[j] === 'i'|| cancion[j] === 'o' || cancion[j] === 'u') {*/
+                if (vocales.includes(cancion[j])) {
+                    cancionResultado += vocales[i];
+                } else {
+                    cancionResultado += cancion[j];
+                }
+            }
+            console.log(`Amb la ${vocales[i]}: ${cancionResultado}`);
+        }
+
+        /*let cancion1 = "Una mosca volava per la llum"
+        for(let i = 0; i < vocales.length; i++){
+            for (let j = 0; j < cancion1.length; j++){
+                if (vocales.includes(cancion1[j])) {
+                    cancion1.replaceAll(vocales[i], cancion1[j]);
+                }
+            }
+            console.log(cancion);
+        }*/
+
+
+    </script>
+</body>
+</html>
