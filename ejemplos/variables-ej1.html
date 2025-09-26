@@ -67,6 +67,70 @@
 
     console.log(typeof x, typeof y, typeof z);
     console.log((x+y)+" "+(x + y + z)+" "+(x - y)+" "+(z - y - z)+" "+(x === z)+" "+(x < y)+" "+(z < y) +" "+(x < z)+" "+(x != z)+" "+(x !== z));
+
+    // Operadores logicos
+    // && || !
+
+    // Objetos basicos
+    // Objetos son prototipicos (prototype)
+    const h = {
+        nom: 'Joan',
+        cognom1: 'Galmes',
+        ulls: 2
+    };
+
+    console.log(h.nom, h.cognom1, h.cognom2);
+
+    h.cognom2 = 'Riera';
+
+    console.log(h.nom, h.cognom1, h.cognom2);
+
+    //alert("Pep");
+    window.alert = function (x){
+        console.log("Hola "+ x);
+    }
+
+    alert("Pep");
+
+    // Arrays basicas
+
+    const i = ["Maria","Mireia","Tomàs",{x:99,y:124}];
+    console.log(i[2].x)
+    //length
+    i.length;
+
+    const p = i[2];
+
+    //Agregar un elemento
+
+    i.push("Miquel");
+
+    //Borrar el ultimo elemento
+
+    i.pop();
+
+    // Funciones
+    // Las funciones son valores!!!!!
+    //CALLBACK funciones pasadas por parametro
+
+    const j = function (){
+        return "Hola que tal";
+    }
+
+    console.log(j, j());
+    console.log(j());
+
+    //2 tipos
+    //funciones ANOMIMAS
+
+    const l = function (){
+        return "Hola que tal";
+    }
+
+    //funciones con nombre
+    function suma(a,b){
+        return a + b;
+    }
 </script>
 </body>
 </html>
